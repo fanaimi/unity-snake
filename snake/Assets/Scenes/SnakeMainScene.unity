@@ -319,35 +319,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1056436133, guid: cd25768bf8b7f1f4bbbe1e9bd8ad4658, type: 3}
   m_PrefabInstance: {fileID: 7956363497647042125}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1405784692 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1193290563251075191, guid: 22b218fbc9b95714caebef3650468d9b, type: 3}
-  m_PrefabInstance: {fileID: 1193290562500651523}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1405784693
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1405784692}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26bbd2336f511174ab2c6a986764feb0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_snakeSpeed: 5
-  m_snakeHead: {fileID: 2123040190}
-  m_snakeBodyPrefab: {fileID: 2110952399484535029, guid: bd83f8b2120696a4fa77f7fa4fc3efe7, type: 3}
-  m_UP: {fileID: 1056436133}
-  m_DOWN: {fileID: 994421609}
-  m_LEFT: {fileID: 910888607}
-  m_RIGHT: {fileID: 211519439}
---- !u!4 &2123040190 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1193290562659577789, guid: 22b218fbc9b95714caebef3650468d9b, type: 3}
-  m_PrefabInstance: {fileID: 1193290562500651523}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1193290562500651523
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -355,6 +326,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1405784693, guid: 22b218fbc9b95714caebef3650468d9b, type: 3}
+      propertyPath: m_UP
+      value: 
+      objectReference: {fileID: 1056436133}
+    - target: {fileID: 1405784693, guid: 22b218fbc9b95714caebef3650468d9b, type: 3}
+      propertyPath: m_DOWN
+      value: 
+      objectReference: {fileID: 994421609}
+    - target: {fileID: 1405784693, guid: 22b218fbc9b95714caebef3650468d9b, type: 3}
+      propertyPath: m_LEFT
+      value: 
+      objectReference: {fileID: 910888607}
+    - target: {fileID: 1405784693, guid: 22b218fbc9b95714caebef3650468d9b, type: 3}
+      propertyPath: m_RIGHT
+      value: 
+      objectReference: {fileID: 211519439}
     - target: {fileID: 1193290563251075190, guid: 22b218fbc9b95714caebef3650468d9b, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -403,9 +390,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Snake
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1193290562378471977, guid: 22b218fbc9b95714caebef3650468d9b, type: 3}
-    - {fileID: 1193290562937006740, guid: 22b218fbc9b95714caebef3650468d9b, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22b218fbc9b95714caebef3650468d9b, type: 3}
 --- !u!1001 &2588653897850719731
 PrefabInstance:

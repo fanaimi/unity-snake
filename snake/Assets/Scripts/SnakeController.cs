@@ -14,20 +14,26 @@ public class SnakeController : MonoBehaviour
     [SerializeField] private float m_snakeSpeed = 5f;
     private Direction m_snakeDir = Direction.Up;
     private Vector3 m_snakeRot;
+    [SerializeField] private int m_gap = 220;
+    [SerializeField] private int m_startSize = 5;
+
+    private List<GameObject> m_snakeFragments = new List<GameObject>();
+    private List<Vector3> m_allPositions = new List<Vector3>();
 
     // ====== refs
-    [SerializeField] private Transform m_snakeHead;
-    [SerializeField] private Transform m_snakeBodyPrefab;
     [SerializeField] private Transform m_UP;
     [SerializeField] private Transform m_DOWN;
     [SerializeField] private Transform m_LEFT;
     [SerializeField] private Transform m_RIGHT;
 
+    [SerializeField] private Transform m_snakeHead;
+    [SerializeField] private GameObject m_snakeBodyPrefab;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        IncreaseLenght(m_startSize);
     }
 
     // Update is called once per frame
@@ -41,10 +47,24 @@ public class SnakeController : MonoBehaviour
 
     private void MoveSnake()
     {
+        // moving forward
         m_snakeHead.position += m_snakeHead.forward * m_snakeSpeed * Time.deltaTime;
-        
+
+        // storing position
+        m_allPositions.Insert(0, m_snakeHead.position);
+
+        // controlling body fragments
+        int index = 0;
+        foreach (var fragment in m_snakeFragments)
+        {
+            Vector3 point = m_allPositions[Mathf.Min(index * m_gap, m_allPositions.Count -1)];
+            fragment.transform.position = point;
+            index++;
+        }
+
+
         // == KEYBOARD CONTROL
-        #if UNITY_STANDALONE_WIN || UNITY_EDITOR
+#if UNITY_STANDALONE_WIN || UNITY_EDITOR
 
 
         if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
@@ -84,4 +104,17 @@ public class SnakeController : MonoBehaviour
         m_snakeHead.eulerAngles = m_snakeRot;
         #endif
     }
+
+
+    private void IncreaseLenght(int newPartsNo)
+    {
+        for (int i = 0; i < newPartsNo; i++)
+        {
+            GameObject bodyFragment = Instantiate(m_snakeBodyPrefab);
+            bodyFragment.transform.SetParent(transform);
+            m_snakeFragments.Add(bodyFragment);
+        }
+    }
+
+
 }
