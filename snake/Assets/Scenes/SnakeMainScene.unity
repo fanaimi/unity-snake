@@ -302,13 +302,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.42, y: 93.5, z: -0.21}
+  m_LocalRotation: {x: 0.4273618, y: -0, z: -0, w: 0.90408075}
+  m_LocalPosition: {x: -0.42, y: 93.5, z: -76.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 50.601, y: 0, z: 0}
 --- !u!4 &994421609 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 994421609, guid: cd25768bf8b7f1f4bbbe1e9bd8ad4658, type: 3}
@@ -331,6 +331,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1056436133}
     - target: {fileID: 1405784693, guid: 22b218fbc9b95714caebef3650468d9b, type: 3}
+      propertyPath: m_gap
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1405784693, guid: 22b218fbc9b95714caebef3650468d9b, type: 3}
       propertyPath: m_DOWN
       value: 
       objectReference: {fileID: 994421609}
@@ -342,6 +346,10 @@ PrefabInstance:
       propertyPath: m_RIGHT
       value: 
       objectReference: {fileID: 211519439}
+    - target: {fileID: 1405784693, guid: 22b218fbc9b95714caebef3650468d9b, type: 3}
+      propertyPath: m_snakeSpeed
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 1193290563251075190, guid: 22b218fbc9b95714caebef3650468d9b, type: 3}
       propertyPath: m_RootOrder
       value: 6

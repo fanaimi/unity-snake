@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -23,7 +24,7 @@ namespace SNAKE
         /// Global utilities
         /// </summary>
         public bool _gameOver = false;
-        public bool _gameStarted = false;
+        public bool _isPlaying = false;
 
         private void Awake()
         {
@@ -49,11 +50,28 @@ namespace SNAKE
         // Update is called once per frame
         void Update()
         {
-            if (Input.anyKeyDown)
+            detectStartGame();
+            detectPause();
+
+        }
+
+        private void detectPause()
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
             {
-                _gameStarted = true;
+                _isPlaying = !_isPlaying;
+                Time.timeScale = _isPlaying ? 0 : 1;
             }
         }
+
+        private void detectStartGame()
+        { 
+            if (Input.anyKeyDown)
+            {
+                _isPlaying = true;
+            }
+        }
+
     }
 
 

@@ -39,7 +39,7 @@ public class SnakeController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!GameManager.Instance._gameOver && GameManager.Instance._gameStarted)
+        if (!GameManager.Instance._gameOver && GameManager.Instance._isPlaying)
         {
             MoveSnake();
         }
@@ -58,7 +58,11 @@ public class SnakeController : MonoBehaviour
         foreach (var fragment in m_snakeFragments)
         {
             Vector3 point = m_allPositions[Mathf.Min(index * m_gap, m_allPositions.Count -1)];
-            fragment.transform.position = point;
+            Vector3 moveDir = point - fragment.transform.position;
+
+            // fragment.transform.position = point;
+            fragment.transform.position += moveDir * m_snakeSpeed * Time.deltaTime;
+            fragment.transform.LookAt(point);
             index++;
         }
 
@@ -102,7 +106,7 @@ public class SnakeController : MonoBehaviour
 
 
         m_snakeHead.eulerAngles = m_snakeRot;
-        #endif
+#endif
     }
 
 
