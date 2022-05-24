@@ -50,26 +50,40 @@ namespace SNAKE
         // Update is called once per frame
         void Update()
         {
-            detectStartGame();
-            detectPause();
+            DetectStartGame();
+            DetectPause();
 
         }
 
-        private void detectPause()
+        private void DetectPause()
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                _isPlaying = !_isPlaying;
-                Time.timeScale = _isPlaying ? 0 : 1;
+                Pause();
             }
         }
 
-        private void detectStartGame()
+        public void Pause()
+        {
+            _isPlaying = !_isPlaying;
+            Time.timeScale =  0;
+        }
+
+        private void DetectStartGame()
         { 
             if (Input.anyKeyDown)
             {
                 _isPlaying = true;
+                Time.timeScale = 1;
             }
+        }
+
+        public void GameOver()
+        {
+            _isPlaying = false;
+            _gameOver = true;
+            Time.timeScale = 0;
+            // will update UI...
         }
 
     }

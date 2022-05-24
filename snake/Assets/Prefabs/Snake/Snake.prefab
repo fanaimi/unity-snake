@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1193290563251075190}
   - component: {fileID: 1405784693}
+  - component: {fileID: 7819883067766631021}
   m_Layer: 0
   m_Name: Snake
   m_TagString: Untagged
@@ -44,15 +45,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26bbd2336f511174ab2c6a986764feb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_snakeSpeed: 5
-  m_gap: 220
   m_startSize: 5
+  m_direction: {x: 0, y: 0, z: 1}
   m_UP: {fileID: 0}
   m_DOWN: {fileID: 0}
   m_LEFT: {fileID: 0}
   m_RIGHT: {fileID: 0}
   m_snakeHead: {fileID: 8928406422523984246}
-  m_snakeBodyPrefab: {fileID: 2110952399484535025, guid: bd83f8b2120696a4fa77f7fa4fc3efe7, type: 3}
+  m_snakeBodyPrefab: {fileID: 2110952399484535029, guid: bd83f8b2120696a4fa77f7fa4fc3efe7, type: 3}
+--- !u!65 &7819883067766631021
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1193290563251075191}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &741485433978712068
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -60,6 +73,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1193290563251075190}
     m_Modifications:
+    - target: {fileID: 1386677570, guid: 30676461a4433494da736ad5783c55fa, type: 3}
+      propertyPath: m_snake
+      value: 
+      objectReference: {fileID: 1405784693}
     - target: {fileID: 8188207424200952178, guid: 30676461a4433494da736ad5783c55fa, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -70,7 +87,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8188207424200952178, guid: 30676461a4433494da736ad5783c55fa, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.2
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8188207424200952178, guid: 30676461a4433494da736ad5783c55fa, type: 3}
       propertyPath: m_LocalPosition.z

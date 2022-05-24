@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Wall
   - Deadly
+  - Edible
   layers:
   - Default
   - TransparentFX
