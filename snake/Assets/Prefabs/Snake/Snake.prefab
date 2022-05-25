@@ -46,12 +46,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_startSize: 5
+  m_snakeSpeed: 280
   m_direction: {x: 0, y: 0, z: 1}
   m_UP: {fileID: 0}
   m_DOWN: {fileID: 0}
   m_LEFT: {fileID: 0}
   m_RIGHT: {fileID: 0}
   m_snakeHead: {fileID: 8928406422523984246}
+  m_snakeHeadRb: {fileID: 741485432609076549}
   m_snakeBodyPrefab: {fileID: 2110952399484535029, guid: bd83f8b2120696a4fa77f7fa4fc3efe7, type: 3}
 --- !u!65 &7819883067766631021
 BoxCollider:
@@ -125,10 +127,19 @@ PrefabInstance:
       propertyPath: m_Name
       value: SnakeHead
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8910610997163783834, guid: 30676461a4433494da736ad5783c55fa, type: 3}
+    - {fileID: 3607940869976951482, guid: 30676461a4433494da736ad5783c55fa, type: 3}
+    - {fileID: 6954874047250108543, guid: 30676461a4433494da736ad5783c55fa, type: 3}
+    - {fileID: 6086171767426700498, guid: 30676461a4433494da736ad5783c55fa, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 30676461a4433494da736ad5783c55fa, type: 3}
 --- !u!4 &8928406422523984246 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8188207424200952178, guid: 30676461a4433494da736ad5783c55fa, type: 3}
+  m_PrefabInstance: {fileID: 741485433978712068}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &741485432609076549 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 1386677569, guid: 30676461a4433494da736ad5783c55fa, type: 3}
   m_PrefabInstance: {fileID: 741485433978712068}
   m_PrefabAsset: {fileID: 0}

@@ -14,7 +14,7 @@ public class SnakeCollisions : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Deadly")) // || other.CompareTag("")
+        if (other.CompareTag("Deadly") || other.CompareTag("Player") )
         {
             // play sound
             m_snake.SetUpSnake();
@@ -24,6 +24,7 @@ public class SnakeCollisions : MonoBehaviour
         if (other.CompareTag("Edible")) 
         {
             print("adding");
+            Destroy(other.gameObject);
             m_growthRate += 1;
             // play sound
             m_snake.IncreaseLenght(m_growthRate);

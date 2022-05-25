@@ -722,10 +722,6 @@ PrefabInstance:
       propertyPath: m_RIGHT
       value: 
       objectReference: {fileID: 211519439}
-    - target: {fileID: 1405784693, guid: 22b218fbc9b95714caebef3650468d9b, type: 3}
-      propertyPath: m_snakeSpeed
-      value: 26
-      objectReference: {fileID: 0}
     - target: {fileID: 1193290563251075190, guid: 22b218fbc9b95714caebef3650468d9b, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -773,6 +769,34 @@ PrefabInstance:
     - target: {fileID: 1193290563251075191, guid: 22b218fbc9b95714caebef3650468d9b, type: 3}
       propertyPath: m_Name
       value: Snake
+      objectReference: {fileID: 0}
+    - target: {fileID: 8928406422523984243, guid: 22b218fbc9b95714caebef3650468d9b, type: 3}
+      propertyPath: m_Size.x
+      value: 0.88901186
+      objectReference: {fileID: 0}
+    - target: {fileID: 8928406422523984243, guid: 22b218fbc9b95714caebef3650468d9b, type: 3}
+      propertyPath: m_Size.y
+      value: 0.9377661
+      objectReference: {fileID: 0}
+    - target: {fileID: 8928406422523984243, guid: 22b218fbc9b95714caebef3650468d9b, type: 3}
+      propertyPath: m_Size.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8928406422523984243, guid: 22b218fbc9b95714caebef3650468d9b, type: 3}
+      propertyPath: m_Center.x
+      value: -0.008743584
+      objectReference: {fileID: 0}
+    - target: {fileID: 8928406422523984243, guid: 22b218fbc9b95714caebef3650468d9b, type: 3}
+      propertyPath: m_Center.y
+      value: -0.031116962
+      objectReference: {fileID: 0}
+    - target: {fileID: 8928406422523984243, guid: 22b218fbc9b95714caebef3650468d9b, type: 3}
+      propertyPath: m_Center.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8928406422523984246, guid: 22b218fbc9b95714caebef3650468d9b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22b218fbc9b95714caebef3650468d9b, type: 3}

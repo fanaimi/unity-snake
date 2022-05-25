@@ -5,6 +5,30 @@ using SNAKE;
 using System;
 
 /// <summary>
+/// class to store details of each snake fragment
+/// </summary>
+public class Fragment
+{
+    public Vector3 m_position;
+    public Vector3 m_rotation;
+
+    /// <summary>
+    /// constructor to store given position and rotation
+    /// </summary>
+    /// <param name="pos"></param>
+    /// <param name="rot"></param>
+    public Fragment(Vector3 pos, Vector3 rot)
+    {
+        m_position = pos;
+        m_rotation = rot;
+    }
+}
+
+
+
+
+
+/// <summary>
 /// @gObj   Snake
 /// @desc   controller for snake 
 /// </summary>
@@ -13,13 +37,14 @@ public class SnakeController : MonoBehaviour
 {
     // ====== vars 
     private Direction m_snakeDir = Direction.Up;
-    [SerializeField] private int m_startSize = 5;
-    [SerializeField] private float  m_snakeSpeed = 15f;
+    // [SerializeField] 
+    private int m_startSize = 25;
+    // [SerializeField] 
+    private float  m_snakeSpeed = 15f;
 
     public Vector3 m_direction = Vector3.forward;
     private Vector3 m_input;
     private Vector3 m_snakeRot;
-
 
     private List<Transform> m_snakeFragments = new List<Transform>();
 
@@ -30,6 +55,7 @@ public class SnakeController : MonoBehaviour
     [SerializeField] private Transform m_RIGHT;
 
     [SerializeField] private Transform m_snakeHead;
+    [SerializeField] private Rigidbody m_snakeHeadRb;
     [SerializeField] private Transform m_snakeBodyPrefab;
 
 
@@ -112,7 +138,7 @@ public class SnakeController : MonoBehaviour
         }
 
 
-        m_snakeHead.eulerAngles = m_snakeRot;
+         m_snakeHead.eulerAngles = m_snakeRot;
 #endif
 
 
@@ -128,7 +154,7 @@ public class SnakeController : MonoBehaviour
             // Set the new direction based on the input
             if (m_input != Vector3.zero)
             {
-                m_direction = m_input/ 3;
+                m_direction = m_input;
             }
 
             // controlling body fragments
@@ -141,13 +167,7 @@ public class SnakeController : MonoBehaviour
             }
 
 
-            // Move the snake in the direction it is facing
-            // Round the values to ensure it aligns to the grid
-            float x = Mathf.Round(m_snakeHead.position.x) + m_direction.x * m_snakeSpeed * Time.fixedDeltaTime;
-            float y = Mathf.Round(m_snakeHead.position.y) + m_direction.y;
-            float z = Mathf.Round(m_snakeHead.position.z) + m_direction.z * m_snakeSpeed * Time.fixedDeltaTime;
-
-            m_snakeHead.position = new Vector3(x, y, z);
+            m_snakeHead.position += m_direction * m_snakeSpeed * Time.fixedDeltaTime;
 
         }
     }
@@ -158,6 +178,7 @@ public class SnakeController : MonoBehaviour
         for (int i = 0; i < newPartsNo; i++)
         {
             Transform newFragment = Instantiate(m_snakeBodyPrefab);
+            newFragment.SetParent(transform);
             newFragment.position = m_snakeFragments[m_snakeFragments.Count - 1].position; 
             m_snakeFragments.Add(newFragment);
         }
