@@ -43,4 +43,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85802291b1d0c6c49a8432c83e3b6442, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sounds: []
+  sounds:
+  - clip: {fileID: 8300000, guid: db7aaef82c0f64c4caaec44ab7454631, type: 3}
+    name: bgm
+    volume: 0.37
+    pitch: 0.38
+    source: {fileID: 0}
+    loop: 1
+  - clip: {fileID: 8300000, guid: 0efc8b44786906840bb7cf6668685507, type: 3}
+    name: bite
+    volume: 0.68
+    pitch: 0
+    source: {fileID: 0}
+    loop: 0
+  - clip: {fileID: 8300000, guid: f518f2581950e3042b8b189b267af24c, type: 3}
+    name: slam
+    volume: 0.62
+    pitch: 0.87
+    source: {fileID: 0}
+    loop: 0
+  - clip: {fileID: 8300000, guid: ab0b50d65b7139f4dbf96330f7870a3e, type: 3}
+    name: death
+    volume: 0.7
+    pitch: 0
+    source: {fileID: 0}
+    loop: 0
