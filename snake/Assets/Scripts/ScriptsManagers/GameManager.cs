@@ -25,6 +25,7 @@ namespace SNAKE
         /// </summary>
         public bool _gameOver = false;
         public bool _isPlaying = false;
+        public int _noOfLives = 5;
 
         private void Awake()
         {
@@ -44,8 +45,15 @@ namespace SNAKE
         // Start is called before the first frame update
         void Start()
         {
-
+            SetUpNewGame();   
         }
+
+        private void SetUpNewGame()
+        {
+            SpawnManager.Instance.ClearAllItems();
+        }
+
+
 
         // Update is called once per frame
         void Update()
@@ -70,12 +78,11 @@ namespace SNAKE
         }
 
         private void DetectStartGame()
-        { 
-            if (Input.anyKeyDown)
-            {
-                _isPlaying = true;
-                Time.timeScale = 1;
-            }
+        {
+            if (!Input.anyKeyDown) return;
+            
+            _isPlaying = true;
+            Time.timeScale = 1;         
         }
 
         public void GameOver()

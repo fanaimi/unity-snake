@@ -45,8 +45,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26bbd2336f511174ab2c6a986764feb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_startSize: 5
-  m_snakeSpeed: 280
   m_direction: {x: 0, y: 0, z: 1}
   m_UP: {fileID: 0}
   m_DOWN: {fileID: 0}
@@ -89,7 +87,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8188207424200952178, guid: 30676461a4433494da736ad5783c55fa, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5
+      value: 3.9
       objectReference: {fileID: 0}
     - target: {fileID: 8188207424200952178, guid: 30676461a4433494da736ad5783c55fa, type: 3}
       propertyPath: m_LocalPosition.z
@@ -126,6 +124,30 @@ PrefabInstance:
     - target: {fileID: 8188207424200952182, guid: 30676461a4433494da736ad5783c55fa, type: 3}
       propertyPath: m_Name
       value: SnakeHead
+      objectReference: {fileID: 0}
+    - target: {fileID: 8188207424200952183, guid: 30676461a4433494da736ad5783c55fa, type: 3}
+      propertyPath: m_Size.x
+      value: 0.88901186
+      objectReference: {fileID: 0}
+    - target: {fileID: 8188207424200952183, guid: 30676461a4433494da736ad5783c55fa, type: 3}
+      propertyPath: m_Size.y
+      value: 0.9377661
+      objectReference: {fileID: 0}
+    - target: {fileID: 8188207424200952183, guid: 30676461a4433494da736ad5783c55fa, type: 3}
+      propertyPath: m_Size.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8188207424200952183, guid: 30676461a4433494da736ad5783c55fa, type: 3}
+      propertyPath: m_Center.x
+      value: -0.008743584
+      objectReference: {fileID: 0}
+    - target: {fileID: 8188207424200952183, guid: 30676461a4433494da736ad5783c55fa, type: 3}
+      propertyPath: m_Center.y
+      value: -0.031116962
+      objectReference: {fileID: 0}
+    - target: {fileID: 8188207424200952183, guid: 30676461a4433494da736ad5783c55fa, type: 3}
+      propertyPath: m_Center.z
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8910610997163783834, guid: 30676461a4433494da736ad5783c55fa, type: 3}

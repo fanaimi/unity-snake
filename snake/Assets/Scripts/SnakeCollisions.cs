@@ -23,11 +23,13 @@ public class SnakeCollisions : MonoBehaviour
 
         if (other.CompareTag("Edible")) 
         {
-            print("adding");
+            // print("adding");
             Destroy(other.gameObject);
+            SpawnManager.Instance.AddItem();
             m_growthRate += 1;
             // play sound
             m_snake.IncreaseLenght(m_growthRate);
+
         }
 
     }

@@ -43,3 +43,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14c636c66bbf3344eac9df59459be460, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_items:
+  - {fileID: 1541859410316496, guid: 832d47962e6b03d419477188c171a6db, type: 3}
+  - {fileID: 1829371231341652, guid: 5ee1e2cd9df18594d9d8515fa83e9b0e, type: 3}
+  - {fileID: 8757453191851041264, guid: d67ce373710962c439b0f2bdfc7c4286, type: 3}
+  - {fileID: 1638444836145330, guid: 3a398898deb5f304e8052f73094055cb, type: 3}
+  - {fileID: 1724972533694550, guid: de61c6ed47d945947a14c9cecb712e41, type: 3}
+  m_interval: 0
+  m_minX: -24
+  m_maxX: 24
+  m_minZ: -24
+  m_maxZ: 24
+  index: 0
+  m_environment: {fileID: 0}
