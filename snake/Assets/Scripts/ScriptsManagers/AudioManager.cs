@@ -9,24 +9,25 @@ public class AudioManager : MonoBehaviour
 
     public Sound[] sounds;
 
-    public static AudioManager instance;
-    
+
+    // ==== singleton
+    private static AudioManager s_instance;
+    public static AudioManager Instance { get { return s_instance; } }
+
+
+
     void Awake()
     {
-        if (instance == null)
+        // singleton
+        if (s_instance != null && s_instance != this)
         {
-            instance = this;
+            Destroy(this.gameObject);
         }
         else
         {
-            Destroy(gameObject) ;
-            //return;
+            s_instance = this;
         }
-
-
-        // we want audioManager to persist through different scenes
         DontDestroyOnLoad(gameObject);
-        
         
         
         foreach (Sound s in sounds)

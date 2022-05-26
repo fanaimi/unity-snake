@@ -125,35 +125,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: SnakeHead
       objectReference: {fileID: 0}
-    - target: {fileID: 8188207424200952183, guid: 30676461a4433494da736ad5783c55fa, type: 3}
-      propertyPath: m_Size.x
-      value: 0.88901186
-      objectReference: {fileID: 0}
-    - target: {fileID: 8188207424200952183, guid: 30676461a4433494da736ad5783c55fa, type: 3}
-      propertyPath: m_Size.y
-      value: 0.9377661
-      objectReference: {fileID: 0}
-    - target: {fileID: 8188207424200952183, guid: 30676461a4433494da736ad5783c55fa, type: 3}
-      propertyPath: m_Size.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8188207424200952183, guid: 30676461a4433494da736ad5783c55fa, type: 3}
-      propertyPath: m_Center.x
-      value: -0.008743584
-      objectReference: {fileID: 0}
-    - target: {fileID: 8188207424200952183, guid: 30676461a4433494da736ad5783c55fa, type: 3}
-      propertyPath: m_Center.y
-      value: -0.031116962
-      objectReference: {fileID: 0}
-    - target: {fileID: 8188207424200952183, guid: 30676461a4433494da736ad5783c55fa, type: 3}
-      propertyPath: m_Center.z
-      value: 0.5
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 8910610997163783834, guid: 30676461a4433494da736ad5783c55fa, type: 3}
-    - {fileID: 3607940869976951482, guid: 30676461a4433494da736ad5783c55fa, type: 3}
-    - {fileID: 6954874047250108543, guid: 30676461a4433494da736ad5783c55fa, type: 3}
-    - {fileID: 6086171767426700498, guid: 30676461a4433494da736ad5783c55fa, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30676461a4433494da736ad5783c55fa, type: 3}
 --- !u!4 &8928406422523984246 stripped
 Transform:

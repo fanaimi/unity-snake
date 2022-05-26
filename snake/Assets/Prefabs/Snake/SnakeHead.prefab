@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 2942920759982183301}
   - component: {fileID: 2338610473888792993}
   - component: {fileID: 9099610497893138101}
-  - component: {fileID: 3607940869976951482}
   m_Layer: 0
   m_Name: Tongue (2)
   m_TagString: Untagged
@@ -82,19 +81,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3607940869976951482
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 967194994867869124}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6821504452581841257
 GameObject:
   m_ObjectHideFlags: 0
@@ -106,7 +92,6 @@ GameObject:
   - component: {fileID: 4513213764709822824}
   - component: {fileID: 5215362259932779688}
   - component: {fileID: 8752100261240420973}
-  - component: {fileID: 6954874047250108543}
   m_Layer: 0
   m_Name: Tongue (1)
   m_TagString: Untagged
@@ -177,19 +162,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6954874047250108543
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6821504452581841257}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7058476268979689795
 GameObject:
   m_ObjectHideFlags: 0
@@ -201,7 +173,6 @@ GameObject:
   - component: {fileID: 2205980803053585042}
   - component: {fileID: 1147414269818974086}
   - component: {fileID: 427575279866370501}
-  - component: {fileID: 8910610997163783834}
   m_Layer: 0
   m_Name: SnakeEyes
   m_TagString: Untagged
@@ -272,19 +243,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8910610997163783834
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7058476268979689795}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8188207424200952182
 GameObject:
   m_ObjectHideFlags: 0
@@ -384,8 +342,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.88901186, y: 0.9377661, z: 0}
+  m_Center: {x: -0.008743584, y: -0.031116962, z: 0.5}
 --- !u!54 &1386677569
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -415,6 +373,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_snake: {fileID: 0}
+  m_growthRate: 0
 --- !u!1 &8779898677343808923
 GameObject:
   m_ObjectHideFlags: 0
@@ -426,7 +385,6 @@ GameObject:
   - component: {fileID: 2995313034980283222}
   - component: {fileID: 6034123550123145908}
   - component: {fileID: 2687782946300136654}
-  - component: {fileID: 6086171767426700498}
   m_Layer: 0
   m_Name: Tongue
   m_TagString: Untagged
@@ -497,16 +455,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6086171767426700498
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8779898677343808923}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}

@@ -54,6 +54,7 @@ public class SpawnManager : MonoBehaviour
 
     public void AddItem()
     {
+        if (!GameManager.Instance._isPlaying) return;
         index = Random.Range(0, m_items.Count - 1);
         Vector3 pos = new Vector3(
             Random.Range(m_minX, m_maxX), 

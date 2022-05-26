@@ -49,6 +49,7 @@ MonoBehaviour:
   - {fileID: 8757453191851041264, guid: d67ce373710962c439b0f2bdfc7c4286, type: 3}
   - {fileID: 1638444836145330, guid: 3a398898deb5f304e8052f73094055cb, type: 3}
   - {fileID: 1724972533694550, guid: de61c6ed47d945947a14c9cecb712e41, type: 3}
+  m_addedItems: []
   m_interval: 0
   m_minX: -24
   m_maxX: 24
